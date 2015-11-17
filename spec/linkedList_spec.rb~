@@ -59,4 +59,9 @@ describe Bibliografia::Book do
 	it "exists a book" do
             expect(@b.is_a?Bibliografia::Book).to eq true
         end
+
+	it "has an ISBN number" do
+	    @b.add_ISBN(23)
+            expect(@b.ISBN).to eq 23
+        end
 end
