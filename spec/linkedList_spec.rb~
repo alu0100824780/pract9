@@ -70,6 +70,10 @@ describe Bibliografia::Book do
         end
 
 	it "is a subclass of basicObject" do
-            expect(@b.is_a?basicObject).to eq true
+            expect(@b.is_a?BasicObject).to eq true
 	end
 end
+
+
+#describe Bibliografia::Revista do
+#end

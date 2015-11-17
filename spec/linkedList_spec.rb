@@ -73,3 +73,7 @@ describe Bibliografia::Book do
             expect(@b.is_a?BasicObject).to eq true
 	end
 end
+
+
+describe Bibliografia::Revista do
+end
