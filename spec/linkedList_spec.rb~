@@ -17,7 +17,7 @@ describe LinkedList::List do
   before :all do
     @n = Node.new(10,nil)
     @l = LinkedList::List.new
-    #@b = Book.new
+    #@b = Bibliografia::Book.new
   end
 
 

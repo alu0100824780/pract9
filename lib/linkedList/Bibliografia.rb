@@ -1,7 +1,8 @@
 
-class Bibliografia
+module Bibliografia
+    class Bibliografia
         attr_reader :Author, :Title, :Serie, :Editorial, :Edicion
-        attr_reader :Fecha_Publication, :ISBN
+        attr_reader :Fecha_Publication
         def initialize 
             @Author = ["Sin autores"]   
             @Title = "Sin titulo"
@@ -9,7 +10,6 @@ class Bibliografia
             @Editorial = "Editorial sin definir"
             @Edicion = 0
             @Fecha_Publication = "01-ENE-1901"
-            @ISBN = []
         end
         
         def add_author(name)
@@ -40,9 +40,6 @@ class Bibliografia
             @Fecha_Publication = fech
         end
         
-        def add_ISBN(num)
-            @ISBN << num
-        end
         
         def get_formato
             a = @Author.join(", ") +"\n"+@Title.to_s+"\n"+@Serie.to_s+
@@ -53,4 +50,5 @@ class Bibliografia
 	    a += "\n\n"
             a
         end
+   end
 end
