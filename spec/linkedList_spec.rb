@@ -17,7 +17,6 @@ describe LinkedList::List do
   before :all do
     @n = Node.new(10,nil)
     @l = LinkedList::List.new
-    #@b = Bibliografia::Book.new
   end
 
 
@@ -30,22 +29,34 @@ describe LinkedList::List do
    end
 
 
-context 'Manipulate data' do
-  it 'Can get first element of the list' do
-     @l.push_back(30)
-     expect(@l.First.value).to eq(30)
-  end
+	context 'Manipulate data' do
+  		it 'Can get first element of the list' do
+		     @l.push_back(30)
+		     expect(@l.First.value).to eq(30)
+		end
 
-  it 'Can insert an element into the list' do
-     @l.push_back(40)
-     expect(@l.Last.value).to eq(40)
-  end
+		it 'Can insert an element into the list' do
+		     @l.push_back(40)
+		     expect(@l.Last.value).to eq(40)
+		end
 
   
-  it 'Can insert more than one element' do
-     @l.push_back(Node.new(50,nil)) 
-     @l.push_back(Node.new(60,nil))
-     expect(@l.Size).to eq(4)
-  end
+		it 'Can insert more than one element' do
+		    @l.push_back(Node.new(50,nil)) 
+		    @l.push_back(Node.new(60,nil))
+		    expect(@l.Size).to eq(4)
+		end
+         end
 end
+
+
+
+describe Bibliografia::Book do
+	before :all  do
+		@b = Bibliografia::Book.new
+        end
+
+	it "exists a book" do
+            expect(@b.is_a?Bibliografia::Book).to eq true
+        end
 end
