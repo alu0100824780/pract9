@@ -4,6 +4,6 @@ require "linkedList/Book"
 require "linkedList/Bibliografia"
 require "linkedList/linkedList"
 
-module linkedList 
+module LinkedList 
 end
 

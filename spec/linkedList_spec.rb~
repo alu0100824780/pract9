@@ -75,5 +75,5 @@ describe Bibliografia::Book do
 end
 
 
-#describe Bibliografia::Revista do
-#end
+describe Bibliografia::Revista do
+end
