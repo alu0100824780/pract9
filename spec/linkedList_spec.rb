@@ -64,4 +64,8 @@ describe Bibliografia::Book do
 	    @b.add_ISBN(23)
             expect(@b.ISBN[0]).to eq 23
         end
+
+	it "is a Bibliografia" do
+	    expect(@b.is_a?Bibliografia::Bibliografia).to eq true
+        end
 end
