@@ -1,6 +1,4 @@
 require 'spec_helper'
-require './lib/node.rb'
-require './lib/linkedList.rb'
 
 
 describe LinkedList do
@@ -19,6 +17,7 @@ describe LinkedList::List do
   before :all do
     @n = Node.new(10,nil)
     @l = LinkedList::List.new
+    @b = Book.new
   end
 
 
