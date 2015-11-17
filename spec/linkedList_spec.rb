@@ -76,4 +76,11 @@ end
 
 
 describe Bibliografia::Revista do
+	before :all do
+		@r = Bibliografia::Revista.new
+	end
+
+	it "exist a magazine" do
+		 expect(@r.is_a?Bibliografia::Revista).to eq true
+	end
 end
