@@ -72,6 +72,11 @@ describe Bibliografia::Book do
 	it "is a subclass of basicObject" do
             expect(@b.is_a?BasicObject).to eq true
 	end
+
+	it "has an author" do
+	    @b.add_author("Rudolf Cicko")
+	    expect(@b.Author[0]).to eq "Rudolf Cicko"
+	end
 end
 
 
@@ -114,4 +119,6 @@ describe Bibliografia::Ebook do
 	it "is a Bibliografia" do
 		expect(@e.is_a?Bibliografia::Bibliografia).to eq true
 	end
+
+	
 end
