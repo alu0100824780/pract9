@@ -91,5 +91,10 @@ describe Bibliografia::Revista do
 	it "is a subclass of basicObject" do
             expect(@r.is_a?BasicObject).to eq true
 	end
+
+	it "has an author" do
+	   @r.add_author("Rudolf Cicko")
+ 	   expect(@r.Author[0]).to eq "Rudolf Cicko"
+	end
 	
 end

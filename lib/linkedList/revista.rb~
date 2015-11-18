@@ -4,11 +4,27 @@ module Bibliografia
 		attr_reader :ISSN
 
 		def initialize
+		     super
 		     @ISSN = []
 		end
 
 		def add_ISSN(num)
 		     @ISSN << num
 		end
+
 	end
 end
+
+
+
+
+r = Bibliografia::Revista.new
+
+r.add_ISSN(23)
+
+puts "la revista tiene ISSN : #{r.ISSN} "
+
+r.add_author("Rudolf Cicko")
+
+puts "author : #{r.Author}"
+
