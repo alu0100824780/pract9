@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 
+=======
 # Node (:value, :next, :back)
 
 module LinkedList
@@ -61,4 +63,5 @@ module LinkedList
         end
   # Your code goes here...
 end
+>>>>>>> Arreglo
 

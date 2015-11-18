@@ -7,6 +7,7 @@ require "linkedList/revista"
 require "linkedList/ebook"
 
 
+<<<<<<< HEAD
 # Node (:value, :next, :back)
 
 module LinkedList
@@ -68,5 +69,8 @@ module LinkedList
 
         end
   # Your code goes here...
+=======
+module LinkedList
+>>>>>>> Arreglo
 end
 
