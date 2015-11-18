@@ -83,4 +83,8 @@ describe Bibliografia::Revista do
 	it "exist a magazine" do
 		 expect(@r.is_a?Bibliografia::Revista).to eq true
 	end
+
+	it "is a Bibliografia" do
+	    expect(@r.is_a?Bibliografia::Bibliografia).to eq true
+        end
 end
