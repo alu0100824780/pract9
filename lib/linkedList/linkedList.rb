@@ -38,6 +38,12 @@ module LinkedList
               end
               aux
            end
+
+	   def [] (i)
+	      at(i)
+	   end
+
+
         end
   # Your code goes here...
 end

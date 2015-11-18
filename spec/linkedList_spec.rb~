@@ -42,10 +42,19 @@ describe LinkedList::List do
 
   
 		it 'Can insert more than one element' do
-		    @l.push_back(Node.new(50,nil)) 
-		    @l.push_back(Node.new(60,nil))
+		    @l.push_back(50) 
+		    @l.push_back(60)
 		    expect(@l.Size).to eq(4)
 		end
+
+                it 'can access to diferent positions in the list' do
+		    expect(@l[0].value).to eq(30)
+                    expect(@l[1].value).to eq(40)
+                    expect(@l[2].value).to eq(50)
+                    expect(@l[3].value).to eq(60)
+                end
+
+	
         end
 
 	context 'Double linked list' do
@@ -55,7 +64,7 @@ describe LinkedList::List do
 
 		it 'can put node at first position' do
 		      @l.push_front(Node.new(70,nil))
-                      expect(@l.First.value).to eq 70
+                      expect(@l.First.value.value).to eq 70
 		end
         end
 end
