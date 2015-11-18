@@ -72,8 +72,10 @@ module LinkedList
 	   end
 
 	   
-
-
+           def empty
+	      @Size == 0
+	   end
+	   
         end
   # Your code goes here...
 end
