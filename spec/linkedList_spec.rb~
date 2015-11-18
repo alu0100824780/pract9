@@ -105,4 +105,9 @@ describe Bibliografia::Ebook do
 	before :all do
 		@e = Bibliografia::Ebook.new
 	end
+
+
+	it "exist an Ebook" do
+		expect(@e.is_a?Bibliografia::Ebook).to eq true
+	end
 end

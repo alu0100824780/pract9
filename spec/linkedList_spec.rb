@@ -110,4 +110,8 @@ describe Bibliografia::Ebook do
 	it "exist an Ebook" do
 		expect(@e.is_a?Bibliografia::Ebook).to eq true
 	end
+
+	it "is a Bibliografia" do
+		expect(@e.is_a?Bibliografia::Bibliografia).to eq true
+	end
 end
