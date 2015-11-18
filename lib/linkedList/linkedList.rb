@@ -19,6 +19,15 @@ module LinkedList
               @Size = @Size + 1 
            end
 
+	   def push_front(v)
+	      if(@Size == 0)
+		   @Last = @First = Node.new(v,nil,nil)
+	      else
+		   @First = Node.new(v,@First, nil)
+	      end
+	      @Size = @Size + 1
+	   end
+
 
            def at(i)
               aux = @First

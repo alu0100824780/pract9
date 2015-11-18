@@ -55,7 +55,7 @@ describe LinkedList::List do
 
 		it 'can put node at first position' do
 		      @l.push_front(Node.new(70,nil))
-                      expect(@l.First.value).to eq 70
+                      expect(@l.First.value.value).to eq 70
 		end
         end
 end
