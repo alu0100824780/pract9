@@ -57,20 +57,30 @@ describe LinkedList::List do
 		it 'can extract first element' do
 		    expect(@l.pop_front.value).to eq(30)
                     expect(@l.pop_front.value).to eq(40)
+		    expect(@l.pop_front.value).to eq(50)
+                    expect(@l.pop_front.value).to eq(60)
 		end
 
+		it 'can extract last element' do
+                    @l.push_back(80)
+                    expect(@l.pop_back.value).to eq(80)
+		end
 	
         end
 
 	context 'Double linked list' do
-		it 'know about behind object' do	
-		     expect(@l.Last.back.back.value).to eq 40
+		it 'know about behind object' do
+                     @l.push_back(50)
+                     @l.push_back(40)	
+		     expect(@l.Last.back.value).to eq 50
 		end
 
 		it 'can put node at first position' do
 		      @l.push_front(70)
                       expect(@l.First.value).to eq 70
 		end
+
+		
         end
 end
 

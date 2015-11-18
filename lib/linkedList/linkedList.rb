@@ -34,13 +34,27 @@ module LinkedList
               if(@Size == 1)
 		 aux = @First
 		 @First = @Last = nil
-                 @Size = 0
 	      else
 		 aux = @First
-		 @First = @First.next
-		 aux
+		 @First = @First.next 
               end
+                @Size = @Size - 1
+		 aux
 	   end
+
+	   
+           def pop_back
+		if(@Size == 1)
+		   aux = @Last
+		   @First = @Last = nil
+		else
+	           aux = @Last
+		   @Last = @Last.back
+		   @Last.next = nil
+                end
+                @Size = @Size - 1
+                aux
+           end
 
 
            def at(i)
@@ -56,6 +70,8 @@ module LinkedList
 	   def [] (i)
 	      at(i)
 	   end
+
+	   
 
 
         end
