@@ -50,7 +50,7 @@ describe LinkedList::List do
 
 	context 'Double linked list' do
 		it 'know about behind object' do	
-		     expect(@l.Last.back.back).to eq 40
+		     expect(@l.Last.back.back.value).to eq 40
 		end
         end
 end

@@ -2,7 +2,7 @@
 module LinkedList
 
 	class List
-	      attr_accessor :First, :Last
+	      attr_accessor :First, :Last   # First = Tail || Last = Head
 	      attr_reader :Size
 	   def initialize
  	      @Last = @First = nil

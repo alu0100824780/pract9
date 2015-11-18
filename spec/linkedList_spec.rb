@@ -52,6 +52,11 @@ describe LinkedList::List do
 		it 'know about behind object' do	
 		     expect(@l.Last.back.back.value).to eq 40
 		end
+
+		it 'can put node at first position' do
+		      @l.push_front(Node.new(70,nil))
+                      expect(@l.First.value).to eq 70
+		end
         end
 end
 
