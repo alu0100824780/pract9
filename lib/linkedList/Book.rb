@@ -5,6 +5,7 @@ module Bibliografia
 		attr_reader :ISBN
 		
 		def initialize
+		    super
 	            @ISBN = []
 		end
 

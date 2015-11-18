@@ -16,15 +16,3 @@ module Bibliografia
 end
 
 
-
-
-r = Bibliografia::Revista.new
-
-r.add_ISSN(23)
-
-puts "la revista tiene ISSN : #{r.ISSN} "
-
-r.add_author("Rudolf Cicko")
-
-puts "author : #{r.Author}"
-

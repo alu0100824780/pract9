@@ -98,3 +98,11 @@ describe Bibliografia::Revista do
 	end
 	
 end
+
+
+
+describe Bibliografia::Ebook do
+	before :all do
+		@e = Bibliografia::Ebook.new
+	end
+end
