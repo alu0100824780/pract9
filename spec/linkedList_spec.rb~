@@ -102,6 +102,10 @@ describe Bibliografia::Revista do
  	   expect(@r.Author[0]).to eq "Rudolf Cicko"
 	end
 	
+	it "has an ISSN number" do
+	   @r.add_ISSN(23)
+	   expect(@r.ISSN[0]).to eq 23
+	end
 end
 
 

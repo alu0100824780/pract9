@@ -124,5 +124,9 @@ describe Bibliografia::Ebook do
 		expect(@e.is_a?Bibliografia::Bibliografia).to eq true
 	end
 
+	it "is a subclass of BasicObject" do
+		expect(@e.is_a?BasicObject).to eq true
+	end
+
 	
 end
