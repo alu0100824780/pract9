@@ -133,5 +133,4 @@ describe Bibliografia::Ebook do
 		expect(@e.URL[0]).to eq "www.myBook.com"
 	end
 
-	
 end

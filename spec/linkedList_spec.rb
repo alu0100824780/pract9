@@ -20,13 +20,13 @@ describe LinkedList::List do
   end
 
 
-  it 'Exist a node of the list with it data and next reference' do
-      expect(@n.value == 10 && @n.next == nil)
-  end
-
-   it  'Can create a list' do
-      expect(LinkedList::List.new).not_to eq(nil)
-   end
+  	it 'Exist a node of the list with it data and next reference' do
+	      expect(@n.value == 10 && @n.next == nil)
+	end
+	
+	it  'Can create a list' do
+	      expect(LinkedList::List.new).not_to eq(nil)
+	end
 
 
 	context 'Manipulate data' do
@@ -46,7 +46,13 @@ describe LinkedList::List do
 		    @l.push_back(Node.new(60,nil))
 		    expect(@l.Size).to eq(4)
 		end
-         end
+        end
+
+	context 'Double linked list' do
+		it 'know about behind object' do	
+		     expect(@l.Last.back.value).to eq 50
+		end
+        end
 end
 
 
@@ -133,5 +139,4 @@ describe Bibliografia::Ebook do
 		expect(@e.URL[0]).to eq "www.myBook.com"
 	end
 
-	
 end
