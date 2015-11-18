@@ -1,4 +1,6 @@
 
+# Node (:value, :next, :back)
+
 module LinkedList
 
 	class List
@@ -26,6 +28,18 @@ module LinkedList
 		   @First = Node.new(v,@First, nil)
 	      end
 	      @Size = @Size + 1
+	   end
+
+	   def pop_front
+              if(@Size == 1)
+		 aux = @First
+		 @First = @Last = nil
+                 @Size = 0
+	      else
+		 aux = @First
+		 @First = @First.next
+		 aux
+              end
 	   end
 
 

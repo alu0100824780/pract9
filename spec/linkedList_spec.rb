@@ -55,7 +55,10 @@ describe LinkedList::List do
                 end
 
 		it 'can extract first element' do
-		    expect(@l.pop_front).to eq(30)
+		    expect(@l.pop_front.value).to eq(30)
+                    expect(@l.pop_front.value).to eq(40)
+		    expect(@l.pop_front.value).to eq(50)
+                    expect(@l.pop_front.value).to eq(60)
 		end
 
 	
