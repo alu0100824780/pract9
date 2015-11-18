@@ -65,6 +65,10 @@ describe LinkedList::List do
                     @l.push_back(80)
                     expect(@l.pop_back.value).to eq(80)
 		end
+
+		it 'can be empty' do
+		    expect(@l.empty).to eq true
+                end
 	
         end
 
