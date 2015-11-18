@@ -11,9 +11,9 @@ module LinkedList
 
 	   def push_back(v)
               if(@Size == 0)
-		  @Last = @First = Node.new(v,nil)
+		  @Last = @First = Node.new(v,nil,nil)
               else
-                  @Last.next = Node.new(v,nil)
+                  @Last.next = Node.new(v,nil,@Last)
 		  @Last = @Last.next
               end
               @Size = @Size + 1 
@@ -39,7 +39,7 @@ module LinkedList
 	      attr_accessor :First, :Last
 	      attr_reader :Size
 	   def initialize
- 	      @Last = @First = nil
+ 	      @Last = @First = @Back = nil
               @Size = 0
            end
 
@@ -48,6 +48,7 @@ module LinkedList
 		  @Last = @First = Node.new(v,nil)
               else
                   @Last.next = Node.new(v,nil)
+		  @Last.next.back = @Last
 		  @Last = @Last.next
               end
               @Size = @Size + 1 
@@ -63,6 +64,9 @@ module LinkedList
               end
               aux
            end
+
+
+	
         end
   # Your code goes here...
 end
