@@ -128,5 +128,10 @@ describe Bibliografia::Ebook do
 		expect(@e.is_a?BasicObject).to eq true
 	end
 
+	it "can have an url reference" do
+		@e.add_URL("www.myBook.com")
+		expect(@e.URL[0]).to eq "www.myBook.com"
+	end
+
 	
 end
