@@ -15,7 +15,7 @@ end
 
 describe LinkedList::List do
   before :all do
-    @n = Node.new(10,nil)
+    @n = Node.new(10,nil,nil)
     @l = LinkedList::List.new
   end
 
@@ -53,6 +53,10 @@ describe LinkedList::List do
                     expect(@l[2].value).to eq(50)
                     expect(@l[3].value).to eq(60)
                 end
+
+		it 'can extract first element' do
+		    expect(@l.pop_front).to eq(30)
+		end
 
 	
         end

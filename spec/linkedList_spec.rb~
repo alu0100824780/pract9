@@ -15,7 +15,7 @@ end
 
 describe LinkedList::List do
   before :all do
-    @n = Node.new(10,nil)
+    @n = Node.new(10,nil,nil)
     @l = LinkedList::List.new
   end
 
@@ -63,8 +63,8 @@ describe LinkedList::List do
 		end
 
 		it 'can put node at first position' do
-		      @l.push_front(Node.new(70,nil))
-                      expect(@l.First.value.value).to eq 70
+		      @l.push_front(70)
+                      expect(@l.First.value).to eq 70
 		end
         end
 end
