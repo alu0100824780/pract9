@@ -4,6 +4,17 @@
 module LinkedList
 
 	class List
+
+	      include Enumerable
+ 
+              def each
+               aux = @First
+               while aux != nil
+		yield aux.value
+		aux = aux.next
+               end
+              end	
+		
 	      attr_accessor :First, :Last   # First = Tail || Last = Head
 	      attr_reader :Size
 	   def initialize

@@ -86,6 +86,38 @@ describe LinkedList::List do
 
 		
         end
+
+  
+        context 'is Enumerable' do
+	    it "comprobrando el metodo all? con un bloque vacio" do
+      		expect(@l.all?).to eq(true)
+    	    end 
+	    it "comprobrando el metodo any?" do
+	        expect(@l.any?).to eq(true)
+	    end 
+	    it "comprobrando el metodo collect" do
+	        expect(@l.map{|i| i*i}).to eq([4900,2500,1600])
+	    end 
+	    it "comprobrando el metodo count" do
+	        expect(@l.count).to eq(3)
+    	    end
+	    it "comprobrando el metodo detect" do
+	        expect(@l.detect {|i| i == 70}).to eq(70)
+	        expect(@l.find {|i| i == 50}).to eq(50)
+	    end
+	    it "comprobrando drop" do
+	        expect(@l.drop(1)).to eq([50,40])
+	    end
+	    it "comprobrando max" do
+	        expect(@l.max).to eq(70)
+	    end
+    	    it "comprobrando min" do
+	        expect(@l.min).to eq(40)
+    	    end
+	    it "comprobrando sort" do
+	        expect(@l.sort).to eq([40,50,70])
+	    end
+        end
 end
 
 
