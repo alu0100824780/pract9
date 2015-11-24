@@ -184,12 +184,16 @@ describe "Bibliografia" do
 
 
      it "can compare authors" do
-	@b.add_author("Aduanich Rodríguez")
+	@b.add_author("Rudolf Cicko")
 	@r.add_author("Rudolf Cicko")
-	expect(@b <=> @r).to eq -1
+	expect(@b <=> @r).to eq 0
      end 
 
 
-     it 
+     it "can compare publication dates" do
+	@b.set_publication(24,11,2015)
+        @r.set_publication(4,3,2013)
+	expect(@b <=> @r).to eq 1
+     end
 end
 

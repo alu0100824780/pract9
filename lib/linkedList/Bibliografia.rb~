@@ -7,9 +7,9 @@ module Bibliografia
 
 	def <=> (other)
              aux = @Author <=> other.Author 
-	     #if( aux == 0)
-		#aux = @Fecha_Publication <=> other.Fecha_Publication
-	     #end
+	     if( aux == 0)
+		aux = @Fecha_Publication <=> other.Fecha_Publication
+	     end
              aux
 	end	
 	
