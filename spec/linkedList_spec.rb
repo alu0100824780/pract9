@@ -186,7 +186,10 @@ describe "Bibliografia" do
      it "can compare authors" do
 	@b.add_author("Aduanich Rodríguez")
 	@r.add_author("Rudolf Cicko")
-	expect(@b < @r).to eq true
+	expect(@b <=> @r).to eq -1
      end 
+
+
+    # it 
 end
 

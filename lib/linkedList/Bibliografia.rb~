@@ -1,6 +1,18 @@
+require 'date'
 
 module Bibliografia
     class Bibliografia
+
+	include Comparable
+
+	def <=> (other)
+             aux = @Author <=> other.Author 
+	     #if( aux == 0)
+		#aux = @Fecha_Publication <=> other.Fecha_Publication
+	     #end
+             aux
+	end	
+	
         attr_reader :Author, :Title, :Serie, :Editorial, :Edicion
         attr_reader :Fecha_Publication
         def initialize 
@@ -9,7 +21,7 @@ module Bibliografia
             @Serie = nil
             @Editorial = "Editorial sin definir"
             @Edicion = 0
-            @Fecha_Publication = "01-ENE-1901"
+            @Fecha_Publication = Date.new(1990,1,1)
         end
         
         def add_author(name)
@@ -36,13 +48,10 @@ module Bibliografia
             @Edicion = num
         end
         
-        def set_publication(fech)
-            @Fecha_Publication = fech
+        def set_publication(d,m,a)
+            @Fecha_Publication = Date.new(a,m,s)
         end
         
-        def add_ISBN(num)
-            @ISBN << num
-        end
         
         def get_formato
             a = @Author.join(", ") +"\n"+@Title.to_s+"\n"+@Serie.to_s+
