@@ -6,6 +6,7 @@ module Bibliografia
 	include Comparable
 
 	def <=> (other)
+             return nil unless !other.is_a? Bibliografia::Bibliografia
              aux = @Author <=> other.Author 
 	     if( aux == 0)
 		aux = @Fecha_Publication <=> other.Fecha_Publication
