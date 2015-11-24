@@ -173,3 +173,13 @@ describe Bibliografia::Ebook do
 	end
 
 end
+
+
+
+describe "Bibliografia" do
+     before :all do
+	@b = Bibliografia::Book.new
+        @r = Bibliografia::Revista.new
+     end
+end
+

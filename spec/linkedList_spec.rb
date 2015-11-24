@@ -173,3 +173,20 @@ describe Bibliografia::Ebook do
 	end
 
 end
+
+
+
+describe "Bibliografia" do
+     before :all do
+	@b = Bibliografia::Book.new
+        @r = Bibliografia::Revista.new
+     end
+
+
+     it "can compare authors" do
+	@b.add_author("Aduanich Rodríguez")
+	@r.add_author("Rudolf Cicko")
+	expect(@b < @r).to eq true
+     end 
+end
+
