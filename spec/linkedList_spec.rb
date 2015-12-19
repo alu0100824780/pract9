@@ -23,7 +23,7 @@ describe LinkedList::List do
   	it 'Exist a node of the list with it data and next reference' do
 	      expect(@n.value == 10 && @n.next == nil)
 	end
-	
+
 	it  'Can create a list' do
 	      expect(LinkedList::List.new).not_to eq(nil)
 	end
@@ -40,18 +40,18 @@ describe LinkedList::List do
 		     expect(@l.Last.value).to eq(40)
 		end
 
-  
+
 		it 'Can insert more than one element' do
-		    @l.push_back(50) 
+		    @l.push_back(50)
 		    @l.push_back(60)
 		    expect(@l.Size).to eq(4)
 		end
 
                 it 'can access to diferent positions in the list' do
-		    expect(@l[0].value).to eq(30)
-                    expect(@l[1].value).to eq(40)
-                    expect(@l[2].value).to eq(50)
-                    expect(@l[3].value).to eq(60)
+		    expect(@l[0]).to eq(30)
+                    expect(@l[1]).to eq(40)
+                    expect(@l[2]).to eq(50)
+                    expect(@l[3]).to eq(60)
                 end
 
 		it 'can extract first element' do
@@ -69,13 +69,13 @@ describe LinkedList::List do
 		it 'can be empty' do
 		    expect(@l.empty).to eq true
                 end
-	
+
         end
 
 	context 'Double linked list' do
 		it 'know about behind object' do
                      @l.push_back(50)
-                     @l.push_back(40)	
+                     @l.push_back(40)
 		     expect(@l.Last.back.value).to eq 50
 		end
 
@@ -84,20 +84,30 @@ describe LinkedList::List do
                       expect(@l.First.value).to eq 70
 		end
 
-		
+
         end
 
-  
-        context 'is Enumerable' do
+
+    context 'is Enumerable' do
+	    @b1 = Bibliografia::Book.new
+      @b2 = Bibliografia::Book.new
+      @b3 = Bibliografia::Book.new
+      @l = LinkedList::List.new
+
+      @l << @b1
+      @l << @b2
+      @l << @b3
+
+
 	    it "comprobrando el metodo all? con un bloque vacio" do
       		expect(@l.all?).to eq(true)
-    	    end 
+    	    end
 	    it "comprobrando el metodo any?" do
 	        expect(@l.any?).to eq(true)
-	    end 
+	    end
 	    it "comprobrando el metodo collect" do
 	        expect(@l.map{|i| i*i}).to eq([4900,2500,1600])
-	    end 
+	    end
 	    it "comprobrando el metodo count" do
 	        expect(@l.count).to eq(3)
     	    end
@@ -117,93 +127,8 @@ describe LinkedList::List do
 	    it "comprobrando sort" do
 	        expect(@l.sort).to eq([40,50,70])
 	    end
+
         end
-end
-
-
-
-describe Bibliografia::Book do
-	before :all  do
-		@b = Bibliografia::Book.new
-        end
-
-	it "exists a book" do
-            expect(@b.is_a?Bibliografia::Book).to eq true
-        end
-
-	it "has an ISBN number" do
-	    @b.add_ISBN(23)
-            expect(@b.ISBN[0]).to eq 23
-        end
-
-	it "is a Bibliografia" do
-	    expect(@b.is_a?Bibliografia::Bibliografia).to eq true
-        end
-
-	it "is a subclass of basicObject" do
-            expect(@b.is_a?BasicObject).to eq true
-	end
-
-	it "has an author" do
-	    @b.add_author("Rudolf Cicko")
-	    expect(@b.Author[0]).to eq "Rudolf Cicko"
-	end
-end
-
-
-describe Bibliografia::Revista do
-	before :all do
-		@r = Bibliografia::Revista.new
-	end
-
-	it "exist a magazine" do
-		 expect(@r.is_a?Bibliografia::Revista).to eq true
-	end
-
-	it "is a Bibliografia" do
-	    expect(@r.is_a?Bibliografia::Bibliografia).to eq true
-        end
-
-	it "is a subclass of basicObject" do
-            expect(@r.is_a?BasicObject).to eq true
-	end
-
-	it "has an author" do
-	   @r.add_author("Rudolf Cicko")
- 	   expect(@r.Author[0]).to eq "Rudolf Cicko"
-	end
-	
-	it "has an ISSN number" do
-	   @r.add_ISSN(23)
-	   expect(@r.ISSN[0]).to eq 23
-	end
-end
-
-
-
-describe Bibliografia::Ebook do
-	before :all do
-		@e = Bibliografia::Ebook.new
-	end
-
-
-	it "exist an Ebook" do
-		expect(@e.is_a?Bibliografia::Ebook).to eq true
-	end
-
-	it "is a Bibliografia" do
-		expect(@e.is_a?Bibliografia::Bibliografia).to eq true
-	end
-
-	it "is a subclass of BasicObject" do
-		expect(@e.is_a?BasicObject).to eq true
-	end
-
-	it "can have an url reference" do
-		@e.add_URL("www.myBook.com")
-		expect(@e.URL[0]).to eq "www.myBook.com"
-	end
-
 end
 
 
@@ -219,7 +144,7 @@ describe "Bibliografia" do
 	@b.add_author("Rudolf Cicko")
 	@r.add_author("Rudolf Cicko")
 	expect(@b <=> @r).to eq 0
-     end 
+     end
 
 
      it "can compare publication dates" do
@@ -228,4 +153,3 @@ describe "Bibliografia" do
 	expect(@b <=> @r).to eq 1
      end
 end
-

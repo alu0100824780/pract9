@@ -111,12 +111,12 @@ describe LinkedList::List do
 	    it "comprobrando max" do
 	        expect(@l.max).to eq(70)
 	    end
-     it "comprobrando min" do
-      expect(@l.min).to eq(40)
-    end
-    it "comprobrando sort" do
-      expect(@l.sort).to eq([40,50,70])
-    end
+    	    it "comprobrando min" do
+	        expect(@l.min).to eq(40)
+    	    end
+	    it "comprobrando sort" do
+	        expect(@l.sort).to eq([40,50,70])
+	    end
         end
 end
 

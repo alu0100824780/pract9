@@ -6,15 +6,15 @@ module LinkedList
 	class List
 
 	      include Enumerable
- 
+
               def each
                aux = @First
                while aux != nil
 		yield aux.value
 		aux = aux.next
                end
-              end	
-		
+              end
+
 	      attr_accessor :First, :Last   # First = Tail || Last = Head
 	      attr_reader :Size
 	   def initialize
@@ -29,7 +29,7 @@ module LinkedList
                   @Last.next = Node.new(v,nil,@Last)
 		  @Last = @Last.next
               end
-              @Size = @Size + 1 
+              @Size = @Size + 1
            end
 
 	   def push_front(v)
@@ -47,13 +47,13 @@ module LinkedList
 		 @First = @Last = nil
 	      else
 		 aux = @First
-		 @First = @First.next 
+		 @First = @First.next
               end
                 @Size = @Size - 1
 		 aux
 	   end
 
-	   
+
            def pop_back
 		if(@Size == 1)
 		   aux = @Last
@@ -75,20 +75,30 @@ module LinkedList
 		aux = aux.next
                 j = j + 1
               end
-              aux
+              aux.value
            end
 
 	   def [] (i)
 	      at(i)
 	   end
 
-	   
+
            def empty
 	      @Size == 0
 	   end
-	   
+
+		 def Size
+			 @Size
+		 end
+
+
+		 def << v
+			 	push_back(v)
+			end
+
+
+
+
         end
   # Your code goes here...
 end
-
-
